@@ -1,7 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+
+  Title:           Appointment App
+  Semester:        COP3804 – Fall 2016
+  @author          5867108
+   Instructor:     C. Charters
+  
+   Due Date:      09/25/2018
+
+    Description of program, & explanation of programming concept(s) being  applied in program
+    This program will create an appointment program to add, search, and display appointments by
+    daily, one time, or month appointments.
  */
 package appointmentsapp;
 
