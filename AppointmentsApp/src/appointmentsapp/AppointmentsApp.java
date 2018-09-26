@@ -149,7 +149,7 @@ public class AppointmentsApp {
         System.out.println("What is the hour of your appointment?(00-23)");
         hour = Integer.parseInt(input.nextLine());
 
-        System.out.println("What is the minutes of your appointment (00-590)?");
+        System.out.println("What is the minutes of your appointment (00-59)?");
         minutes = Integer.parseInt(input.nextLine());
 
         OneTimeAppointment oneTime = new OneTimeAppointment(year, day, month, hour, minutes, description, person);
@@ -157,7 +157,8 @@ public class AppointmentsApp {
         //Letting the user know the appointment was successfully added
         System.out.println(
                 "Appointment added with "
-                + oneTime.getLastName()
+                + oneTime.getDescription()
+                + " " + oneTime.getLastName()
                 + " on " + oneTime.getMonth()
                 + "/" + oneTime.getDay()
                 + "/" + oneTime.getYear()
@@ -190,9 +191,10 @@ public class AppointmentsApp {
 
         //Letting the user know the appointment was successfully added
         System.out.println(
-                "Appointment added with"
+                "Appointment added with" + " "
+                + daily.getDescription() + " "
                 + daily.getLastName()
-                + " daily at "
+                + " it is daily at "
                 + daily.getHour() + ":"
                 + daily.getMinutes()
         );
@@ -225,7 +227,8 @@ public class AppointmentsApp {
 
         //Letting the user know the appointment was successfully added
         System.out.println(
-                "Appointment added with"
+                "Appointment added with" + " "
+                + monthly.getDescription() + " "
                 + monthly.getLastName()
                 + " on day "
                 + monthly.getDay()
@@ -236,36 +239,32 @@ public class AppointmentsApp {
         return monthly;
     }
 
-}/**
-         * Create a menu loop as follows:
-         *
-         * How many appointments do you wish to make? 3
-         *
-         * Please make a selection: 1. One Time Appointment 2. Daily Appointment
-         * 3. Monthly Appointment
-         *         *
-         * For Each option, request the appropriate data from the user, and then
-         * instantiate the appropriate class/subclass in the Appointment
-         * hierarchy For each appointment made, you will add it to an array of
-         * appointments that you have created when you found out how many appts.
-         *
-         * Once the menu LOOP is over, ask the user the following question in a
-         * Do-While LOOP: What is the date you wish to look up in your
-         * Appointments' Calendar? Enter the month: 03 Enter the day: 15 Enter
-         * the year: 2017
-         *
-         * (Display the result in the following format:)
-         *
-         * On 3 / 15 / 2017 you have the following appointments: Dentist
-         * appointment with Dr. Smith at 13:30 Piano Lessons with Ms. Katie at
-         * 17:30 Athletic Training with Ms. Jones at 10:00
-         *
-         * Do you wish to look up another date? (If they answer NO, exit the
-         * program with message) “Thank you for using your appointment
-         * calendar.”
-         *
-         * (If they answer YES, continue to ask for another date to look up).
-         * "What is the date you wish to look up in your Appointments' Calendar?
-         * " etc.,.
-         *
-         */
+}
+/**
+ * Create a menu loop as follows:
+ *
+ * How many appointments do you wish to make? 3
+ *
+ * Please make a selection: 1. One Time Appointment 2. Daily Appointment 3.
+ * Monthly Appointment * For Each option, request the appropriate data from the
+ * user, and then instantiate the appropriate class/subclass in the Appointment
+ * hierarchy For each appointment made, you will add it to an array of
+ * appointments that you have created when you found out how many appts.
+ *
+ * Once the menu LOOP is over, ask the user the following question in a Do-While
+ * LOOP: What is the date you wish to look up in your Appointments' Calendar?
+ * Enter the month: 03 Enter the day: 15 Enter the year: 2017
+ *
+ * (Display the result in the following format:)
+ *
+ * On 3 / 15 / 2017 you have the following appointments: Dentist appointment
+ * with Dr. Smith at 13:30 Piano Lessons with Ms. Katie at 17:30 Athletic
+ * Training with Ms. Jones at 10:00
+ *
+ * Do you wish to look up another date? (If they answer NO, exit the program
+ * with message) “Thank you for using your appointment calendar.”
+ *
+ * (If they answer YES, continue to ask for another date to look up). "What is
+ * the date you wish to look up in your Appointments' Calendar? " etc.,.
+ *
+ */
